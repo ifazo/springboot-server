@@ -1,6 +1,9 @@
-# Use official Maven image to build the application
-FROM maven:3.9.5-eclipse-temurin-23 AS build
+# Use a generic OpenJDK image and install Maven
+FROM eclipse-temurin:23 AS build
 WORKDIR /app
+
+# Install Maven manually
+RUN apt-get update && apt-get install -y maven
 
 # Copy the project files
 COPY pom.xml .

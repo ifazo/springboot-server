@@ -12,7 +12,7 @@ public class ServerApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ServerApplication.class, args);
-		log.info("Spring Boot Application started successfully.");
+		log.info("Spring Boot Application running on port 8080");
 	}
 
 	
